@@ -12,10 +12,6 @@ RUN pip install jupyter pandas sklearn matplotlib ipympl ortools pydot\
     RISE jupyter_contrib_nbextensions tables tensorflow_probability
 RUN jupyter contrib nbextension install --system
 
-
-RUN pip install jupyter pandas sklearn matplotlib ipympl ortools \
-    RISE jupyter_contrib_nbextensions tables tensorflow_probability pydot
-
 # Make sure the contents of our repo are in /app
 COPY . /app
 
