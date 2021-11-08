@@ -9,7 +9,7 @@ RUN apt-get update -y && apt-get install -y zip graphviz
 # Install additional Python packages
 RUN pip install --upgrade pip
 RUN pip install jupyter pandas sklearn matplotlib ipympl ortools pydot\
-    RISE jupyter_contrib_nbextensions tables tensorflow_probability
+    RISE jupyter_contrib_nbextensions tables tensorflow_probability==0.14.1
 RUN jupyter contrib nbextension install --system
 
 # Make sure the contents of our repo are in /app
